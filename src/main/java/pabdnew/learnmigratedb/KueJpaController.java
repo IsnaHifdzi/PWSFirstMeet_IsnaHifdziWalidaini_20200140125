@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import pabdnew.learnmigratedb.exceptions.IllegalOrphanException;
 import pabdnew.learnmigratedb.exceptions.NonexistentEntityException;
 import pabdnew.learnmigratedb.exceptions.PreexistingEntityException;
@@ -28,7 +29,7 @@ public class KueJpaController implements Serializable {
     public KueJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private EntityManagerFactory emf = null;
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("pabdnew_learnmigratedb_jar_0.0.1-SNAPSHOTPU");
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
