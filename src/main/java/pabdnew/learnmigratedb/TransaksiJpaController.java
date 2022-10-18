@@ -28,6 +28,11 @@ public class TransaksiJpaController implements Serializable {
     }
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("pabdnew_learnmigratedb_jar_0.0.1-SNAPSHOTPU");
 
+    public TransaksiJpaController() {
+    }
+    
+    
+
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }

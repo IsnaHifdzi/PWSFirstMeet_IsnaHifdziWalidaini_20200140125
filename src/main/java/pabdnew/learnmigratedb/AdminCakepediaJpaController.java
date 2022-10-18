@@ -30,6 +30,11 @@ public class AdminCakepediaJpaController implements Serializable {
     }
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("pabdnew_learnmigratedb_jar_0.0.1-SNAPSHOTPU");
 
+    public AdminCakepediaJpaController() {
+    }
+    
+    
+
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
